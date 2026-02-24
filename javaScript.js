@@ -187,7 +187,6 @@ function renderInterview() {
   }
   // interviewlist er daata interview a niye loop then html create 
   for (let interview of interviewList) {
-    console.log(interview)
     let div = document.createElement('div');
     div.className = 'full-card p-6 bg-white border border-[#F1F2F4] rounded-lg'
     div.innerHTML = `
@@ -233,7 +232,6 @@ function renderRejected() {
   }
   // rej er data akta akta kore loop chalay html create
   for (let rejected of rejectedList) {
-    console.log(rejected)
     let div = document.createElement('div');
     div.className = 'full-card p-6 bg-white border border-[#F1F2F4] rounded-lg'
     div.innerHTML = `
