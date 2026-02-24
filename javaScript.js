@@ -183,6 +183,7 @@ function renderInterview() {
             </div>
         `
   }
+  // interviewlist er daata interview a niye loop then html create 
   for (let interview of interviewList) {
     console.log(interview)
     let div = document.createElement('div');
@@ -212,3 +213,4 @@ function renderInterview() {
     filteredSection.appendChild(div);
   }
 }
+
