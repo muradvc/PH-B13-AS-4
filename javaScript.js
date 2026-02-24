@@ -19,7 +19,7 @@ const allCardSection = document.getElementById('all-cards');
 
 const mainContainer = document.querySelector('main');
 
-// count calculate er function
+// count calculate machine
 function calculateCount() {
   const currentTotal = allCardSection.children.length;
   total.innerText = currentTotal;
@@ -38,7 +38,7 @@ function calculateCount() {
   rejectedCount.innerText = rejectedList.length;
 }
 
-
+// machine call
 calculateCount();
 
 
@@ -57,7 +57,8 @@ function toggleStyle(id) {
   currentStatus = id;
   selected.classList.remove('bg-white', 'text-[#64748B]')
   selected.classList.add('bg-[#3B82F6]', 'text-white')
-
+  
+  // sorto anujai section show hide
   if (id === 'interview-filter-btn') {
     allCardSection.classList.add('hidden');
     filteredSection.classList.remove('hidden');
@@ -70,14 +71,13 @@ function toggleStyle(id) {
     filteredSection.classList.remove('hidden');
     renderRejected();
   }
+  // machine call
   calculateCount();
 
 }
 
 mainContainer.addEventListener('click', function (event) {
 
-
-  
   if (event.target.classList.contains('interview-btn')) {
     const parentNode = event.target.parentNode.parentNode;
     const cardH = parentNode.querySelector('.card-h').innerText;
@@ -105,6 +105,7 @@ mainContainer.addEventListener('click', function (event) {
     if (currentStatus === 'rejected-filter-btn') {
       renderRejected();
     }
+    // mahine cll
     calculateCount();
 
   } else if (event.target.classList.contains('rejected-btn')) {
@@ -134,6 +135,7 @@ mainContainer.addEventListener('click', function (event) {
     if (currentStatus === 'interview-filter-btn') {
       renderInterview();
     }
+    // machine call
     calculateCount();
 
   }
@@ -157,7 +159,7 @@ mainContainer.addEventListener('click', function (event) {
     } else if (currentStatus === 'rejected-filter-btn') {
       renderRejected();
     }
-
+    // machine call
     calculateCount();
 
 
