@@ -77,7 +77,7 @@ function toggleStyle(id) {
 mainContainer.addEventListener('click', function (event) {
 
 
-
+  
   if (event.target.classList.contains('interview-btn')) {
     const parentNode = event.target.parentNode.parentNode;
     const cardH = parentNode.querySelector('.card-h').innerText;
